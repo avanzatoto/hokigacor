@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVANZATOTO - Play Smart, Win Big, Stay Premium</title>
+    
+    <!-- 1. FAVICON -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- 2. META SEO & LINK PREVIEW -->
+    <meta name="description" content="AVANZATOTO - Platform Premium Terpercaya. Play Smart, Win Big, Stay Premium.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AVANZATOTO - Play Smart, Win Big, Stay Premium">
+    <meta property="og:description" content="Platform game online premium dengan pelayanan VIP 24/7 dan transaksi instan.">
+    <meta property="og:image" content="link-preview-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Font Google & Ikon -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --gold-light: #fff6de;
+            --gold-neon: #ffcc5c;
+            --gold-primary: #dfb76c;
+            --gold-dark: #735522;
+            --gold-gradient: linear-gradient(135deg, #fff6de 0%, #ffcc5c 50%, #8a6f3e 100%);
+            --bg-dark: #050507;
+            --glass-card: rgba(10, 10, 14, 0.85);
+        }
+
+        html {
+            min-height: 100vh;
+            background-color: var(--bg-dark);
+            background-image: url('background-besar.jpg');
+            background-size: 140px; 
+            background-repeat: repeat; 
+            background-position: top left;
+            background-attachment: fixed; 
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 45px 15px;
+            position: relative;
+            background: transparent;
+        }
+
+        /* Overlay Gelap Sinematik */
+        body::before {
+            content: '';
+            position: fixed; 
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: radial-gradient(circle at center, rgba(6, 6, 8, 0.3) 0%, rgba(3, 3, 5, 0.95) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .main-content-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            z-index: 2;
+            padding: 10px 0;
+        }
+
+        /* ========================================================
+           BINGKAI NEON MEWAH BERGERAK (ANGULAR BORDER GLOW)
+           ======================================================== */
+        .premium-wrapper {
+            width: 100%;
+            max-width: 520px;
+            background: var(--glass-card);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-radius: 24px;
+            padding: 40px 30px; 
+            position: relative;
+            text-align: center;
+            overflow: hidden; /* Memotong sudut cahaya animasi luar */
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.95),
+                        0 0 30px rgba(255, 204, 92, 0.05);
+        }
+
+        /* Efek garis laser neon berputar di balik card */
+        .premium-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                transparent, 
+                rgba(255, 204, 92, 0.1), 
+                var(--gold-neon), 
+                rgba(255, 204, 92, 0.1), 
+                transparent 60%
+            );
+            animation: rotateNeonBorder 5s linear infinite;
+            z-index: -2;
+        }
+
+        /* Lapisan background dalam sebagai penutup center neon */
+        .premium-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: 2px; /* Tebal bingkai neon luar */
+            background: linear-gradient(145deg, #0e0e13 0%, #060608 100%);
+            border-radius: 22px;
+            z-index: -1;
+        }
+
+        @keyframes rotateNeonBorder {
+            100% { transform: rotate(360deg); }
+        }
+
+        /* FOTO BANNER UTAMA */
+        .foto-tengah-container {
+            width: 100%; 
+            margin: 0 auto 30px auto;
+            border-radius: 16px; 
+            overflow: hidden;
+            border: 1px solid rgba(255, 204, 92, 0.35);
+            box-shadow: 0 0 20px rgba(255, 204, 92, 0.15);
+            background: #000;
+        }
+
+        .foto-tengah-container img {
+            width: 100%;
+            height: auto;
+            max-height: 280px; 
+            display: block;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .premium-wrapper:hover .foto-tengah-container img {
+            transform: scale(1.03);
+        }
+
+        /* ========================================================
+           EFEK NEON BERGERAK JELAS DI DALAM HURUF
+           ======================================================== */
+        .logo-section h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 38px;
+            font-weight: 900;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            /* Kombinasi gradien kontras tinggi untuk efek neon air mengalir */
+            background: linear-gradient(
+                90deg, 
+                #735522 0%, 
+                #ffcc5c 25%, 
+                #fff6de 50%, 
+                #ffcc5c 75%, 
+                #735522 100%
+            );
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textNeonLiquid 3s linear infinite;
+            /* Dobel shadow untuk kilau eksternal yang tebal & dramatis */
+            filter: drop-shadow(0 0 8px rgba(255, 204, 92, 0.6)) 
+                    drop-shadow(0 0 25px rgba(255, 204, 92, 0.3));
+        }
+
+        @keyframes textNeonLiquid {
+            0% { background-position: 0% center; }
+            100% { background-position: -200% center; }
+        }
+
+        .tagline {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: #d9b66c;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+            text-shadow: 0 0 5px rgba(217, 182, 108, 0.3);
+        }
+
+        /* BUTTONS (LOGIN / DAFTAR) - ANTI TINDIH */
+        .auth-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 20px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            letter-spacing: 1.5px;
+        }
+
+        .btn-login {
+            background: var(--gold-gradient);
+            color: #0b0b0d;
+            border: 1px solid #ffffff;
+            box-shadow: 0 5px 20px rgba(255, 204, 92, 0.3);
+        }
+
+        .btn-login:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 25px rgba(255, 204, 92, 0.6);
+            filter: brightness(1.15);
+        }
+
+        .btn-daftar {
+            background: rgba(255, 204, 92, 0.04);
+            color: var(--gold-neon);
+            border: 1px solid rgba(255, 204, 92, 0.35);
+        }
+
+        .btn-daftar:hover {
+            border-color: #ffffff;
+            background: rgba(255, 204, 92, 0.15);
+            transform: translateY(-3px);
+            color: #fff;
+            box-shadow: 0 0 20px rgba(255, 204, 92, 0.25);
+        }
+
+        /* LINK ALTERNATIF PANEL */
+        .alternatif-panel {
+            background: rgba(5, 5, 7, 0.7);
+            border: 1px solid rgba(255, 204, 92, 0.15);
+            border-radius: 16px;
+            padding: 30px 20px 25px 20px;
+            margin-bottom: 35px;
+            position: relative;
+        }
+
+        .panel-label {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0b0b0f;
+            padding: 4px 22px;
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--gold-neon);
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            border: 1px solid rgba(255, 204, 92, 0.4);
+            border-radius: 30px;
+            box-shadow: 0 0 15px rgba(255, 204, 92, 0.2);
+            white-space: nowrap;
+        }
+
+        /* Links Grid */
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .link-item {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 204, 92, 0.12);
+            border-radius: 10px;
+            padding: 15px 12px;
+            text-decoration: none;
+            color: #d1d1d6;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .link-item i {
+            font-size: 14px;
+            color: var(--gold-neon);
+        }
+
+        .link-item span {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .link-item:hover {
+            border-color: var(--gold-neon);
+            color: #ffffff;
+            background: rgba(255, 204, 92, 0.08);
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(255, 204, 92, 0.15);
+        }
+
+        /* LIVE SUPPORT CAPSULE */
+        .livechat-container-center {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .capsule-live-support {
+            background: var(--gold-gradient);
+            padding: 14px 40px;
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            box-shadow: 0 5px 20px rgba(115, 85, 34, 0.4);
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 290px;
+        }
+
+        .capsule-live-support:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(255, 204, 92, 0.6);
+            filter: brightness(1.15);
+        }
+
+        .capsule-icon {
+            color: #0b0b0d;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .capsule-text {
+            color: #0b0b0d;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* FITUR UNGGULAN */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            border-top: 1px solid rgba(255, 204, 92, 0.15);
+            padding-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .feature-box {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            padding: 12px 15px;
+            border-radius: 12px;
+            gap: 12px;
+        }
+
+        .feature-icon-wrap {
+            width: 38px;
+            height: 38px;
+            background: rgba(255, 204, 92, 0.08);
+            border: 1px solid rgba(255, 204, 92, 0.25);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-neon);
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .feature-text-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .feature-box h4 {
+            font-size: 11px;
+            font-weight: 600;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .feature-box p {
+            font-size: 10px;
+            color: #8e8e93;
+        }
+
+        /* LISENSI KEAMANAN */
+        .secure-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--gold-neon);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: rgba(255, 204, 92, 0.07);
+            padding: 8px 20px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 204, 92, 0.2);
+        }
+
+        /* MOBILE OPTIMIZATION (ANTI OVERLAPPING & MENIMPA) */
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 10px;
+            }
+            .premium-wrapper {
+                padding: 30px 20px;
+                border-radius: 20px;
+            }
+            .premium-wrapper::after {
+                border-radius: 18px;
+            }
+            .logo-section h1 {
+                font-size: 28px;
+                letter-spacing: 4px;
+            }
+            .tagline {
+                margin-bottom: 25px;
+            }
+            /* Dipaksa turun ke bawah saat di HP agar menu tidak bertabrakan/tindih */
+            .auth-grid, .links-grid, .features-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            .feature-box {
+                padding: 14px;
+            }
+            .btn {
+                padding: 14px 15px;
+                font-size: 13px;
+            }
+            .link-item {
+                padding: 14px 15px;
+                justify-content: flex-start;
+                padding-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-content-container">
+        <!-- CONTAINER BINGKAI NEON BERGERAK -->
+        <div class="premium-wrapper">
+            
+            <!-- Banner Grafis -->
+            <div class="foto-tengah-container">
+                <img src="foto-tengah.jpg" alt="Avanzatoto Premium Graphic">
+            </div>
+
+            <!-- Teks Judul Efek Neon Mengalir Jelas -->
+            <div class="logo-section">
+                <h1>Avanzatoto</h1>
+                <div class="tagline">Play Smart • Win Big • Stay Premium</div>
+            </div>
+
+            <!-- Tombol Utama Akses -->
+            <div class="auth-grid">
+                <a href="https://website-tujuan-anda.com/login" class="btn btn-login" target="_blank">
+                    <i class="fa-solid fa-right-to-bracket"></i> LOGIN
+                </a>
+                <a href="https://website-tujuan-anda.com/daftar" class="btn btn-daftar" target="_blank">
+                    <i class="fa-solid fa-user-plus"></i> DAFTAR
+                </a>
+            </div>
+
+            <!-- Panel Navigasi Link -->
+            <div class="alternatif-panel">
+                <div class="panel-label">Link Alternatif Resmi</div>
+                
+                <div class="links-grid">
+                    <a href="https://website-tujuan-anda.com/link1" class="link-item" target="_blank">
+                        <i class="fa-solid fa-link"></i>
+                        <span>Link Alternatif 1</span>
+                    </a>
+                    <a href="https://website-tujuan-anda.com/link2" class="link-item" target="_blank">
+                        <i class="fa-solid fa-link"></i>
+                        <span>Link Alternatif 2</span>
+                    </a>
+                    <a href="https://website-tujuan-anda.com/link3" class="link-item" target="_blank">
+                        <i class="fa-solid fa-link"></i>
+                        <span>Link Alternatif 3</span>
+                    </a>
+                    <a href="https://website-tujuan-anda.com/link4" class="link-item" target="_blank">
+                        <i class="fa-solid fa-link"></i>
+                        <span>Link Alternatif 4</span>
+                    </a>
+                </div>
+
+                <div class="livechat-container-center">
+                    <a href="https://website-tujuan-anda.com/livechat" class="capsule-live-support" target="_blank">
+                        <div class="capsule-icon">
+                            <i class="fa-headset fa-solid"></i>
+                        </div>
+                        <div class="capsule-text">Live Support</div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Fitur Layanan VIP -->
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="feature-text-wrap">
+                        <h4>Aman & Terpercaya</h4>
+                        <p>Sistem enkripsi ketat</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon-wrap"><i class="fa-solid fa-bolt"></i></div>
+                    <div class="feature-text-wrap">
+                        <h4>Transaksi Instan</h4>
+                        <p>Proses super cepat</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon-wrap"><i class="fa-solid fa-gem"></i></div>
+                    <div class="feature-text-wrap">
+                        <h4>Bonus Eksklusif</h4>
+                        <p>Event & Reward harian</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon-wrap"><i class="fa-solid fa-headset"></i></div>
+                    <div class="feature-text-wrap">
+                        <h4>Layanan VIP 24/7</h4>
+                        <p>Respon instan & ramah</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proteksi Keamanan -->
+            <div>
+                <div class="secure-tag">
+                    <i class="fa-solid fa-circle-check"></i> 100% Terlisensi & Aman
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
